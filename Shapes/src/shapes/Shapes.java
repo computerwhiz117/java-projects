@@ -26,33 +26,29 @@ public class Shapes {
         System.out.println("Select the number of any requirements");
         int requirements = shapes.nextByte();
         
-        String a = "Circle";
-        String b = "X";
-        String c = "Box";
-        String d = "Xbox";
         
-        if (a.equals(b))
+        if (type.equals("Circle"))
         {
             System.out.println("You are printing a circle");
             System.out.println("Rows: " + rows);
             System.out.println("Columns: " + columns);
-            System.out.println("Requirements :" + requirements);
+            System.out.println("Requirements: " + requirements);
         }
-        else if (b.equals(c))
+        else if (type.equals("X"))
         {
             System.out.println("You are printing an X");
             System.out.println("Rows: " + rows);
             System.out.println("Columns: " + columns);
             System.out.println("Requirements: " + requirements);
         }
-        else if (c.equals(d))
+        else if (type.equals("Box"))
         {
             System.out.println("You are printing a box");
             System.out.println("Rows: " + rows);
             System.out.println("Columns: " + columns);
             System.out.println("Requirements: " + requirements);
         }
-        else if (d.equals(c))
+        else if (type.equals("Xbox"))
         {
             System.out.println("You are printing a box with an X inside");
             System.out.println("Rows: " + rows);
