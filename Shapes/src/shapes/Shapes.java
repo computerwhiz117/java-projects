@@ -26,33 +26,29 @@ public class Shapes {
         System.out.println("Select the number of any requirements");
         int requirements = shapes.nextByte();
         
-        Scanner Circle;
-        Scanner X;
-        Scanner Box;
-        Scanner Xbox;
         
-        if (shapes == Circle)
+        if (type == "Circle")
         {
             System.out.println("You are printing a circle");
             System.out.println("Rows: " + rows);
             System.out.println("Columns: " + columns);
             System.out.println("Requirements :" + requirements);
         }
-        else if (shapes == X)
+        else if (type == "X")
         {
             System.out.println("You are printing an X");
             System.out.println("Rows: " + rows);
             System.out.println("Columns: " + columns);
             System.out.println("Requirements: " + requirements);
         }
-        else if (shapes == Box)
+        else if (type == "Box")
         {
             System.out.println("You are printing a box");
             System.out.println("Rows: " + rows);
             System.out.println("Columns: " + columns);
             System.out.println("Requirements: " + requirements);
         }
-        else if (shapes == Xbox)
+        else if (type == "Xbox")
         {
             System.out.println("You are printing a box with an X inside");
             System.out.println("Rows: " + rows);
@@ -64,7 +60,7 @@ public class Shapes {
         {
             System.out.println("You are printing an other shape");
             System.out.println("Rows : " + rows);
-            System.out.println("Columns" + columns);
+            System.out.println("Columns: " + columns);
             System.out.println("Requirements: " + requirements);
         }
     }
