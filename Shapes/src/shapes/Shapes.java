@@ -16,53 +16,24 @@ public class Shapes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner shapes = new Scanner (System.in);
-        System.out.println("Select the type of shape you want");
-        String type = shapes.nextLine();
-        System.out.println("Select the number of rows");
-        int rows = shapes.nextByte();
-        System.out.println("Select the number of columns");
-        int columns = shapes.nextByte();
-        System.out.println("Select the number of any requirements");
-        int requirements = shapes.nextByte();
-        
-        
-        if (type.equals("Circle"))
-        {
-            System.out.println("You are printing a circle");
-            System.out.println("Rows: " + rows);
-            System.out.println("Columns: " + columns);
-            System.out.println("Requirements: " + requirements);
-        }
-        else if (type.equals("X"))
-        {
-            System.out.println("You are printing an X");
-            System.out.println("Rows: " + rows);
-            System.out.println("Columns: " + columns);
-            System.out.println("Requirements: " + requirements);
-        }
-        else if (type.equals("Box"))
-        {
-            System.out.println("You are printing a box");
-            System.out.println("Rows: " + rows);
-            System.out.println("Columns: " + columns);
-            System.out.println("Requirements: " + requirements);
-        }
-        else if (type.equals("Xbox"))
-        {
-            System.out.println("You are printing a box with an X inside");
-            System.out.println("Rows: " + rows);
-            System.out.println("Columns: " + columns);
-            System.out.println("Requirements: " + requirements);
-            
-        }
-        else
-        {
-            System.out.println("You are printing an other shape");
-            System.out.println("Rows : " + rows);
-            System.out.println("Columns: " + columns);
-            System.out.println("Requirements: " + requirements);
-        }
-    }
-    
-}
+       int rows, columns;
+       Scanner shapes = new Scanner(System.in);
+       System.out.println("Select your shape");
+       String type = shapes.nextLine();
+       System.out.println("Select the number of rows");
+       rows = shapes.nextInt();
+       System.out.println("Select the number of columns");
+       columns = shapes.nextInt();
+       
+       System.out.println("You are printing a box");
+       
+     for (int r = 0; r < rows; r++)
+     {
+         for (int c = 0; c < columns; c++)
+         {
+             System.out.print("*");
+         }
+         System.out.println();
+     }
+
+
