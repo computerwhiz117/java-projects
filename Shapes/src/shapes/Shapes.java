@@ -44,12 +44,12 @@ public class Shapes {
                 break;
               
             case "Circle":
-                PrintPattern(radius);
+                //PrintPattern(radius);
                 System.out.println("You are printing a circle");
                 break;
               
             case "X":
-                pattern(len);
+                //pattern(len);
                 System.out.println("You are printing an X");
                 break;
                 
@@ -77,35 +77,35 @@ public class Shapes {
       }
         
         // function to print circle pattern 
-    static void printPattern(int radius) { 
+    //static void printPattern(int radius) { 
   
     // dist represents distance to the center 
-    double dist; 
+    //double dist; 
   
     // for horizontal movement 
-    for (int i = 0; i <= 2 * radius; i++) { 
+    //for (int i = 0; i <= 2 * radius; i++) { 
   
     // for vertical movement 
-    for (int j = 0; j <= 2 * radius; j++) { 
-        dist = Math.sqrt((i - radius) * (i - radius) + 
-                         (j - radius) * (j - radius)); 
+    //for (int j = 0; j <= 2 * radius; j++) { 
+        //dist = Math.sqrt((i - radius) * (i - radius) + 
+                         //(j - radius) * (j - radius)); 
   
         // dist should be in the range (radius - 0.5) 
         // and (radius + 0.5) to print stars(*) 
-        if (dist > radius - 0.5 && dist < radius + 0.5) 
-        System.out.print("*"); 
-        else
-        System.out.print(" "); 
-    } 
+        //if (dist > radius - 0.5 && dist < radius + 0.5) 
+        //System.out.print("*"); 
+        //else
+        //System.out.print(" "); 
+    //} 
   
-    System.out.print("\n"); 
-    }
-}
+    //System.out.print("\n"); 
+    //}
+//}
     
 // Function to print given  
 // string in cross pattern 
-static void pattern(String str, 
-                    int len) 
+//static void pattern(String str, 
+                  //  int len) 
 { 
       
     // i and j are the indexes  
@@ -118,17 +118,17 @@ static void pattern(String str,
     // we increment i and decrement j, 
     // we print character only  
     // of k==i or k==j 
-    for (int i = 0; i < len; i++) 
-    { 
-        int j = len - 1 - i; 
-        for (int k = 0; k < len; k++) 
-        { 
-            if (k == i || k == j) 
-                System.out.print(str.charAt(k)); 
-            else
-                System.out.print(" "); 
-        } 
-        System.out.println(""); 
+    //for (int i = 0; i < len; i++) 
+    //{ 
+        //int j = len - 1 - i; 
+        //for (int k = 0; k < len; k++) 
+        //{ 
+            //if (k == i || k == j) 
+                //System.out.print(str.charAt(k)); 
+            //else
+                //System.out.print(" "); 
+        //} 
+        //System.out.println(""); 
     } 
   } 
 }
