@@ -28,7 +28,7 @@ public class Shapes {
             System.out.println("Please select the type of shape");
             System.out.println("1. Box");
             System.out.println("2. Circle");
-            //System.out.println("3. X");
+            System.out.println("3. X");
             System.out.println("To exit the program type exit");
             choice = shapes.next(); 
             
@@ -50,12 +50,12 @@ public class Shapes {
                 System.out.println("You are printing a circle");
                 break;
               
-            //case "X":
-                //System.out.println("Select the type of length");
-                //len = shapes.nextInt();
-                //pattern(len);
-                //System.out.println("You are printing an X");
-                //break;
+            case "X":
+                System.out.println("Select the type of length");
+                len = shapes.nextInt();
+                pattern(len);
+                System.out.println("You are printing an X");
+                break;
                 
             case "exit":
                 System.out.println("Goodbye");
@@ -107,11 +107,50 @@ public class Shapes {
     }
 }
     
+    static void pattern(int len) {
+        for(int i=1; i<=5; i++) {
+            for(int j=1; j<=5; j++) {
+                if(i==j) {
+                    System.out.print("#");
+                }
+                else if (i +j==6){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+                
+                System.out.print("\n");
+                }
+                
+            }
+        }
+    }
+        //for (int i = 0; i < len; i++)
+        //{
+            //int j = len - 1 - i;
+            //for (int k = 0; k < len; k++)
+            //{
+                //if (k == i || k == j)
+                    //System.out.print(str.charAt(k));
+                //else
+                    //System.out.print(" ");
+            //}
+            //System.out.println("");
+        //}
+    //}
+    //public static void word(String[] args)
+    //{
+        //String str = "helloworld";
+        //int len = str.length();
+        //pattern(str, len);
+    //}
+    
 //Function to print given  
  //string in cross pattern 
-    static void pattern(String str, 
-                    int len) 
-    { 
+    //static void pattern(String str, 
+                    //int len) 
+    //{ 
       
     /* i and j are the indexes  
      of characters to be  
@@ -123,17 +162,16 @@ public class Shapes {
      we increment i and decrement j, 
      we print character only  
      of k==i or k==j */
-    for (int i = 0; i < len; i++) 
-    { 
-        int j = len - 1 - i; 
-        for (int k = 0; k < len; k++) 
-        { 
-            if (k == i || k == j) 
-                System.out.print(str.charAt(k)); 
-            else
-                System.out.print(" "); 
-        } 
-        System.out.println(""); 
-    } 
-  } 
-}
+    //for (int i = 0; i < len; i++) 
+    //{ 
+        //int j = len - 1 - i; 
+        //for (int k = 0; k < len; k++) 
+        //{ 
+            //if (k == i || k == j) 
+                //System.out.print(str.charAt(k)); 
+            //else
+                //System.out.print(" "); 
+        //} 
+        //System.out.println(""); 
+    //} 
+  //} 
