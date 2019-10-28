@@ -5,6 +5,7 @@
  */
 package shapes;
 import java.util.Scanner;
+import java.io.*;
 
 
 /**
@@ -16,9 +17,10 @@ public class Shapes {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int rows, columns, radius, len;
         String type;
+        String filename;
         String choice;
         Scanner shapes = new Scanner(System.in);
         
@@ -35,6 +37,8 @@ public class Shapes {
         switch(choice)
         {
             case "Box":
+                System.out.print("Enter the filename");
+                filename = Shapes.nextLine();
                 System.out.println("Select the number of rows");
                 rows = shapes.nextInt();
                 System.out.println("Select the number of columns");
@@ -44,6 +48,8 @@ public class Shapes {
                 break;
               
             case "Circle":
+                System.out.print("Enter the filename");
+                filename = Shapes.nextLine();
                 System.out.println("Select the number of radius");
                 radius = shapes.nextInt();
                 printPattern(radius);
@@ -51,6 +57,8 @@ public class Shapes {
                 break;
               
             case "X":
+                System.out.print("Enter the filename");
+                filename = Shapes.nextLine();
                 System.out.println("Select the type of length");
                 len = shapes.nextInt();
                 pattern(len);
@@ -126,6 +134,22 @@ public class Shapes {
             }
         }
     }
+
+File file = new File(filename);
+if (file.exists())
+{
+    System.out.println("The file " + filename + "already exists.");
+}
+
+PrintWriter outputFile = new PrintWriter(file);
+
+for (i = 1; i<= numShapes; i++)
+{
+    outputfile.println(Shapes);
+}
+
+outputFile.close();
+System.out.println("Data written to the file.");
         //for (int i = 0; i < len; i++)
         //{
             //int j = len - 1 - i;
