@@ -38,7 +38,7 @@ public class Shapes {
         {
             case "Box":
                 System.out.print("Enter the filename");
-                filename = Shapes.nextLine();
+                filename = shapes.nextLine();
                 System.out.println("Select the number of rows");
                 rows = shapes.nextInt();
                 System.out.println("Select the number of columns");
@@ -49,7 +49,7 @@ public class Shapes {
               
             case "Circle":
                 System.out.print("Enter the filename");
-                filename = Shapes.nextLine();
+                filename = shapes.nextLine();
                 System.out.println("Select the number of radius");
                 radius = shapes.nextInt();
                 printPattern(radius);
@@ -58,7 +58,7 @@ public class Shapes {
               
             case "X":
                 System.out.print("Enter the filename");
-                filename = Shapes.nextLine();
+                filename = shapes.nextLine();
                 System.out.println("Select the type of length");
                 len = shapes.nextInt();
                 pattern(len);
@@ -133,7 +133,7 @@ public class Shapes {
                 
             }
         }
-    }
+    static void file (String filename) {
 
 File file = new File(filename);
 if (file.exists())
@@ -150,6 +150,10 @@ for (i = 1; i<= numShapes; i++)
 
 outputFile.close();
 System.out.println("Data written to the file.");
+}
+    }
+
+
         //for (int i = 0; i < len; i++)
         //{
             //int j = len - 1 - i;
