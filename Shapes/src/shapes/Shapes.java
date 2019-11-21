@@ -134,24 +134,30 @@ public class Shapes {
             }
         }
     static void file (String filename) {
+        
+            File file = new File(filename);
+            if (file.exists())
+            {
+                System.out.println("The file " + filename + "already exists.");
+            }
+        
+        
+            try{
+                PrintWriter outputFile = new PrintWriter(file);
 
-File file = new File(filename);
-if (file.exists())
-{
-    System.out.println("The file " + filename + "already exists.");
-}
+                for (int i = 1; i<= numShapes; i++)
+                {
+                    outputFile.println(Shapes);
+                }
 
-PrintWriter outputFile = new PrintWriter(file);
-
-for (i = 1; i<= numShapes; i++)
-{
-    outputfile.println(Shapes);
-}
-
-outputFile.close();
-System.out.println("Data written to the file.");
-}
+                outputFile.close();
+                System.out.println("Data written to the file.");
+            } catch(Exception e){
+                
+            }
+        
     }
+}
 
 
         //for (int i = 0; i < len; i++)
