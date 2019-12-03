@@ -78,15 +78,20 @@ public class Shapes {
     
     
     
-    static void ShapesMethod(int rows, int columns) {
+    static void ShapesMethod(int rows, int columns) {  //circle function
+        
+        String shape = "";
         for (int r = 0; r < rows; r++)
         {
             for (int c = 0; c < columns; c++)
             {
-                System.out.print("*");
+                shape += "*";
+                //System.out.print("*");
             }
+            shape += "\n";
             System.out.println();
       }
+        file(filename, shape);
     }
         
          //function to print circle pattern 
@@ -132,29 +137,15 @@ public class Shapes {
                 }
                 
             }
+        
         }
     static void file (String filename) {
         
-            File file = new File(filename);
-            if (file.exists())
-            {
-                System.out.println("The file " + filename + "already exists.");
-            }
         
-        
-            try{
-                PrintWriter outputFile = new PrintWriter(file);
-
-                for (int i = 1; i<= numShapes; i++)
-                {
-                    outputFile.println(Shapes);
-                }
-
-                outputFile.close();
-                System.out.println("Data written to the file.");
-            } catch(Exception e){
-                
-            }
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));  //Set true for append mode 
+        writer.newLine();   //Add new line
+        writer.write(shapes);
+        writer.close();
         
     }
 }
